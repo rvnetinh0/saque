@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saque</title>
+</head>
+<body>
+    <form>
+        <p>Saldo Total:<input type="number" id="numero" readonly value="1500"></p>
+        <p> Valor de Saque: <input type="text" id="nome"></p>
+        <button type="button" onclick="obterDados()">Sacar</button>
+        <p> Valor: <input type="number" id="result" readonly placeholder="Saída"></p>
+        
+        
+    </form>
+   <script>
+function obterDados(){
+        let nome = parseFloat (getElementById(nome).value);
+        let numero = parseFloat (getElementById(numero).value);    
+        if(nome<=numero){
+            document.getElementById("result").value = saldo;
+            document.getElementById("result").style.color = "red" ;
+            alert("Operação realizada com sucesso!!");
+        }else{
+            alert("Operação não realizada!!");
+        }
+    }
+   </script> 
+</body>
+</html>
